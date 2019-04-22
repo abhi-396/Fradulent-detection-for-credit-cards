@@ -39,4 +39,5 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 cm = confusion_matrix(y_test, y_pred)
 accuracy = accuracy_score(y_test, y_pred)
 
-print(cm, accuracy)
+print('Confusion matrix', cm)
+print('Accuracy', accuracy)
