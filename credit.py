@@ -47,11 +47,11 @@ print('Accuracy', accuracy)
 plt.bar([0, 1], [300, 293])
 plt.xlabel('Class')
 plt.ylabel('Amount')
-plt.title('Amount vs Class')
+plt.title('Amount vs Class(training sample data set)')
 
 # Visualizing training sample dataset through bargraphs
 test_group = df_test_all.groupby(['Class']).groups
 plt.bar([0, 1], [test_group[0].size, test_group[1].size])
 plt.xlabel('Class')
 plt.ylabel('Amount')
-plt.title('Amount vs Class')
+plt.title('Amount vs Class(test data set)')
