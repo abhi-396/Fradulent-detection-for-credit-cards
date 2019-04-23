@@ -6,6 +6,7 @@ Created on Fri Apr 19 17:37:34 2019
 """
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Loading data
 dataset = pd.read_csv('creditcard.csv')
@@ -41,3 +42,13 @@ accuracy = accuracy_score(y_test, y_pred)
 
 print('Confusion matrix', cm)
 print('Accuracy', accuracy)
+
+# Visualizing training sample dataset through bargraphs
+plt.bar([0, 1], [300, 293])
+
+# Visualizing training sample dataset through bargraphs
+test_group = df_test_all.groupby(['Class']).groups
+plt.bar([0, 1], [test_group[0].size, test_group[1].size])
+plt.xlabel('Class')
+plt.ylabel('Amount')
+plt.title('Amount vs Class')
